@@ -107,7 +107,24 @@ Pode ser testada facilmente, verificando se o professor consegue selecionar uma 
 
 ### 3.3. Wireframes (Semana 03)
 
-*Posicione aqui as imagens do wireframe construído para sua solução e, opcionalmente, o link para acesso (mantenha o link sempre público para visualização).*
+<div align="center">
+  <div align="center">
+    <sub>Wireframe Fluxo do Usuário</sub><br>
+    <img src="assets/fluxo_usuario.png" width="85%"><br>
+    <a href="https://www.figma.com/design/2UVmkvQp59TqM8lI4yCnOM/Untitled?node-id=0-1&m=dev&t=2f3UpjqqJatKLPja-1" target="_blank">
+      <sup>Link Figma</sup>
+    </a>
+  </div>
+  <sup> O wireframe apresenta o fluxo do sistema de reservas da plataforma Adalove, permitindo que alunos e professores realizem login, visualizem a lista de salas disponíveis e filtrem por critérios como data, bloco e capacidade. Através da tabela de reservas, o usuário escolhe um horário e confirma a reserva. A tela “Minhas Reservas” exibe agendamentos futuros com opções de cancelamento. Além disso, o sistema envia notificações de confirmação e lembrete, facilitando o controle dos compromissos acadêmicos.</sup>
+  </div>
+
+  <sub>Wireframe Fluxo do Administrador</sub><br>
+  <img src="assets/fluxo_adm.png" width="85%"><br>
+  <a href="https://www.figma.com/design/2UVmkvQp59TqM8lI4yCnOM/Untitled?node-id=0-1&m=dev&t=2f3UpjqqJatKLPja-1" target="_blank">
+    <sup>Link Figma</sup>
+  </a><br>
+  <sup>O wireframe apresenta a interface destinada à área administrativa do sistema de reservas da faculdade. Após realizar login com nome, e-mail e senha, o administrador é direcionado para uma tela de gerenciamento das solicitações de reserva de salas. Nessa grade, são exibidas todas as reservas feitas pelos alunos, organizadas por horário e sala, com os respectivos dados dos solicitantes. A funcionalidade central dessa interface permite ao administrador aprovar, cancelar ou alterar reservas diretamente da tabela, oferecendo uma visão consolidada que facilita o controle da ocupação dos espaços e a resolução de possíveis conflitos de agendamento.</sup>
+  </div>
 
 ### 3.4. Guia de estilos (Semana 05)
 
