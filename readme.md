@@ -1,5 +1,4 @@
 
-=======
 # 🏫 Sistema de Reservas — AdaLove
 Plataforma web integrada ao site institucional do Inteli para gerenciamento de reservas de salas acadêmicas. O sistema permite que alunos, professores e administradores consultem horários disponíveis, realizem agendamentos e acompanhem suas reservas de forma simples e digital. Administradores têm acesso a um painel de controle para aprovar, cancelar ou alterar solicitações.
 
