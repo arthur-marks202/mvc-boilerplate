@@ -1,21 +1,24 @@
-<<<<<<< HEAD
-=======
-# 🏫 Checkin Room
 
-Sistema web para automação do processo de **reserva de salas em ambientes acadêmicos**. A plataforma possibilita que estudantes, professores e coordenadores verifiquem a disponibilidade de salas em tempo real, realizem reservas com antecedência e recebam notificações automáticas quando a solicitação for aprovada ou recusada. Administradores têm acesso a um painel de controle com gestão de solicitações.
+=======
+# 🏫 Sistema de Reservas — AdaLove
+Plataforma web integrada ao site institucional do Inteli para gerenciamento de reservas de salas acadêmicas. O sistema permite que alunos, professores e administradores consultem horários disponíveis, realizem agendamentos e acompanhem suas reservas de forma simples e digital. Administradores têm acesso a um painel de controle para aprovar, cancelar ou alterar solicitações.
 
 ---
 
 ## ✅ Funcionalidades
+Login com perfil (aluno, professor, administrador)
 
-- Login para diferentes perfis de usuário (aluno, professor, coordenador, recepção)
-- Cadastro e edição de dados pessoais
-- Consulta de horários disponíveis por sala
-- Realização de reservas com data e horário
-- Painel administrativo com aprovações de solicitações
-- Notificações automáticas para usuários
-- Testes unitários com Jest
+Consulta de salas e horários disponíveis
 
+Realização, edição e cancelamento de reservas
+
+Painel do usuário com histórico e lembretes
+
+Painel administrativo com controle de solicitações
+
+Notificações de confirmação e lembrete de reservas
+
+Testes unitários com Jest
 ---
 
 ## 📁 Estrutura de Pastas
@@ -73,7 +76,7 @@ mvc-boilerplate/
 1. **Clone o repositório**
 
 ```bash
-git clone https://github.com/macosta7/mvc-boilerplate.git
+git clone https://github.com/arthur-marks202/mvc-boilerplate.git
 cd mvc-boilerplate 
 ```  
 
@@ -105,5 +108,3 @@ node app.js
 ```arduino
 http://localhost:3000
 ```
-
->>>>>>> 51e93badd77877c4514062cecb0b40632f0e9819
