@@ -17,7 +17,7 @@
 <br>
 
 ## <a name="c1"></a>1. Introdução 
-# Descrição Reformulada do Projeto
+# Descrição do Projeto
 
 O projeto consiste no desenvolvimento de um **sistema de reserva de salas** acessível via **plataforma web**, integrado ao site institucional **AdaLove**, da faculdade **Inteli**. A proposta busca ampliar a autonomia e facilitar o dia a dia dos alunos e professores, oferecendo um meio simples, digital e acessível para agendar as diversas mini salas de estudo e reuniões disponíveis no campus.
 
@@ -87,9 +87,60 @@ Pode ser testada facilmente, verificando se o professor consegue selecionar uma 
 
 ### 3.1. Modelagem do banco de dados  (Semana 3)
 
-*Posicione aqui os diagramas de modelos relacionais do seu banco de dados, apresentando todos os esquemas de tabelas e suas relações. Utilize texto para complementar suas explicações, se necessário.*
+O modelo de tabelas foi projetado para suportar as funcionalidades do sistema de reservas de salas da plataforma AdaLove. Ele contempla usuários com diferentes perfis, controle de reservas e envio de notificações. A estrutura garante integridade e facilidade de gestão dos dados.
 
-*Posicione também o modelo físico com o Schema do BD (arquivo .sql)*
+<div align="center">
+  <sub>Persona</sub><br>
+  <img src="assets/modelo-banco.png" width="80%">
+</div>
+
+**O sistema é composto por quatro entidades principais:**
+
+1. Usuário  
+Representa todos os usuários cadastrados na plataforma, podendo ter o tipo aluno, professor ou administrador.
+2. Sala  
+Define as salas disponíveis para reserva, com nome, capacidade e localização.
+3. Reserva  
+Representa os agendamentos feitos por usuários para uma determinada sala, data e horário.
+4. Notificação  
+Controla os lembretes e confirmações enviados aos usuários.
+
+A seguir está o código SQL utilizado para criação das tabelas no Supabase/PostgreSQL:
+
+```sql
+CREATE TABLE usuario (
+  id_usuario SERIAL PRIMARY KEY,
+  nome TEXT NOT NULL,
+  email TEXT UNIQUE NOT NULL,
+  senha TEXT NOT NULL,
+  tipo_usuario TEXT NOT NULL CHECK (tipo_usuario IN ('aluno', 'professor', 'admin'))
+);
+
+CREATE TABLE sala (
+  id_sala SERIAL PRIMARY KEY,
+  nome TEXT NOT NULL,
+  capacidade INT NOT NULL,
+  localizacao TEXT NOT NULL
+);
+
+CREATE TABLE reserva (
+  id_reserva SERIAL PRIMARY KEY,
+  id_usuario INT NOT NULL REFERENCES usuario(id_usuario),
+  id_sala INT NOT NULL REFERENCES sala(id_sala),
+  data_reserva DATE NOT NULL,
+  horario_inicio TIME NOT NULL,
+  horario_fim TIME NOT NULL,
+  status_reserva TEXT NOT NULL DEFAULT 'pendente' CHECK (status_reserva IN ('pendente', 'aprovada', 'cancelada'))
+);
+
+CREATE TABLE notificacao (
+  id_notificacao SERIAL PRIMARY KEY,
+  id_usuario INT NOT NULL REFERENCES usuario(id_usuario),
+  mensagem TEXT NOT NULL,
+  data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  visualizada BOOLEAN DEFAULT FALSE
+);
+```
 
 ### 3.1.1 BD e Models (Semana 5)
 *Descreva aqui os Models implementados no sistema web*
